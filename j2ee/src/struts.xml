@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts SYSTEM "struts-2.0.dtd" >
+<struts>
+    <package name="default" extends="struts-default">
+      <default-action-ref name="listSchedule"/>
+         <action name="listSchedule" class="schedule.action.ScheduleAction" method="ShowCampus">
+            <result name="success">/index.jsp</result>
+         </action>
+          <action name="listData" class="schedule.action.ScheduleAction" method="listData">
+            <result name="success">/index.jsp</result>
+         </action>
+        
+      </package></struts>

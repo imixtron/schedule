@@ -1,0 +1,51 @@
+@CHARSET "ISO-8859-1";
+
+.tbl{
+		border-collapse: collapse;
+		border: 1px solid black;
+		
+	}
+	.days{
+		width:22.4pt;
+		font-size: 14pt;
+		font-weight: bold;
+	}
+	.rooms{
+		width:44.15pt;
+	}
+	slots{
+		width:98px;
+ 		font-family: monospace; 
+ 		font-size: 11px;	
+	}
+	.ends{
+		border-right: solid windowtext 1.5pt;
+	}
+	.header{
+		text-align: center;
+		font-weight: bold;
+	}
+	.rows{
+		height: 35.25pt;
+		font-size: 8.0pt;
+		text-align: top;
+	}	
+	td{
+		margin: 0 0 0 0;
+	}
+	.firstdiv{
+		position: absolute;
+		top:50%;
+	}
+	.flip { 
+	    width: 1px;
+	    -ms-transform: rotate(7deg); /* IE 9 */
+	    -webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
+	    transform: rotate(90deg);
+	}
+	a:link {
+	    color: red;
+	}	
+	a:visited {
+	    color: red;
+	}
