@@ -10,8 +10,9 @@
 <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
 <script>
 deleteEntry = function(tdOb){
+	tof = tdOb;
 	_schid = tdOb.getElementsByTagName('span');
-	_schid = _schid[0].innerText
+	_schid = _schid[0].innerHTML;
 	
 	if(!confirm("schedule ID: "+_schid+"\nAre you sure?"))
 		return;

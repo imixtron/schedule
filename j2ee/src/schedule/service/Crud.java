@@ -34,7 +34,7 @@ public class Crud {
 			pstmt.executeUpdate();
 		} catch (SQLException e1) {
 			// TODO Auto-generated catch block
-			System.out.println("SQLException: Failed to get DB Conn");
+			System.out.println(Query);
 			e1.printStackTrace();
 			return "false";
 		}

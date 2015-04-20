@@ -124,7 +124,7 @@ runQuery = function(){
 	$.ajax({
         type: "POST",
         url:"update.jsp",//jsp,servlet,struts action
-        data: {"query":insertQuery}
+        data: {"oper":"insert","query":insertQuery}
 	}).success(function(responseText){
 		alert("success");
 		console.log(responseText);

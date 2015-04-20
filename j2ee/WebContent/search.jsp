@@ -13,14 +13,18 @@
 	Statement stmt = Database.getConnection().createStatement();
 	String term = request.getParameter("term");
 	String type = request.getParameter("type");
-	String sql = "SELECT oc.offid, CONCAT(`teachername`, ' - ', `title`, ' - ', `sectionname`) AS offcrs FROM (((offeredcourse oc " +
-			     "LEFT JOIN course c ON ((oc.courseid = c.courseid))) "+
-			     "LEFT JOIN teacher t ON ((oc.teacherid = t.teacherid))) "+
-			     "LEFT JOIN section s ON ((oc.secid = s.secid)))";
+	String sql = "SELECT oc.offid, "+
+			   "CONCAT(`teachername`, ' - ', `title`, ' - ' , "+
+			    "(SELECT GROUP_CONCAT(l.sectionname) "+
+			      "FROM  `section` l, `sectiondetails` p "+
+			      "WHERE oc.offid = p.offid AND p.secid = l.secid)"+
+			   ") AS offcrs FROM (((offeredcourse2 oc LEFT JOIN course c ON ((oc.courseid = c.courseid))) LEFT JOIN teacher t ON ((oc.teacherid = t.teacherid))))";
+
 
 	
 	if(type.equals("offcrs")){
-		ResultSet rs = stmt.executeQuery(sql +" WHERE CONCAT(`teachername`, ' - ', `title`, ' - ', `sectionname`) LIKE '%"+term+"%' LIMIT 10");
+		//System.out.println(sql);
+		ResultSet rs = stmt.executeQuery(sql +" WHERE CONCAT(`teachername`, ' - ', `title`, ' - ', (SELECT GROUP_CONCAT(l.sectionname) FROM  `section` l, `sectiondetails` p WHERE oc.offid = p.offid AND p.secid = l.secid)) LIKE '%"+term+"%' LIMIT 10");
 		ArrayList<HashMap<String, Object>> list = new ArrayList<HashMap<String, Object>>();
 	
 		while (rs.next()) {

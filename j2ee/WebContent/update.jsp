@@ -2,6 +2,7 @@
 
 <%@page import="schedule.service.Crud"%>
 <%
+System.out.println("!: "+request.getParameter("oper"));
 	String oper = request.getParameter("oper");
 	if(oper.equals("insert")){
 		String query = request.getParameter("query");
