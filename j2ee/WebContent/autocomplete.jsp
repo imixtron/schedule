@@ -86,7 +86,7 @@ function newRow(){
 	$("#offcrs").focus();
 }
 generateQuery = function(){
-	insertQuery = "INSERT INTO `schedule`.`schedule` (`offid`, `slotid`, `occupied`) \n VALUES ";
+	insertQuery = "INSERT INTO `schedule` (`offid`, `slotid`, `occupied`) \n VALUES ";
 
 	var _slotid = document.querySelectorAll("#_slotid");
 	var _offid = document.querySelectorAll("#_offid");

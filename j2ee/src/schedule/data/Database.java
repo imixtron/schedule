@@ -11,7 +11,7 @@ public class Database {
 		
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			conn = DriverManager.getConnection("jdbc:mysql://localhost:3311/schedule", "root", "root");
+			conn = DriverManager.getConnection("jdbc:mysql://localhost:3311/schedule2", "root", "root");
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

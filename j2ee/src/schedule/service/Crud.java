@@ -28,7 +28,7 @@ public class Crud {
 		PreparedStatement pstmt = null;
 		if(Query==null)
 			return "false";
-				
+		System.out.println(Query);
 		try {
 			pstmt = Database.getConnection().prepareStatement(Query);
 			pstmt.executeUpdate();
