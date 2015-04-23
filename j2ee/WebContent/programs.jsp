@@ -20,13 +20,25 @@
 	<br />
 	<s:a>
 		<s:param name="program" value="1"></s:param>
-		<s:param name="slottype" value="1"></s:param> BBBB</s:a>
+		<s:param name="slottype" value="1"></s:param> BABS</s:a>
 	<s:a>
 		<s:param name="program" value="3"></s:param>
-		<s:param name="slottype" value="2"></s:param>BBBB</s:a>
+		<s:param name="slottype" value="2"></s:param>BSCS</s:a>
 	<s:a>
 		<s:param name="program" value="2"></s:param>
 		<s:param name="slottype" value="1"></s:param>BBA</s:a>
+	<s:a>
+		<s:param name="program" value="4"></s:param>
+		<s:param name="slottype" value="2"></s:param>BEME</s:a>
+	<s:a>
+		<s:param name="program" value="5"></s:param>
+		<s:param name="slottype" value="1"></s:param>BS MEDIA</s:a>
+	<s:a>
+		<s:param name="program" value="6"></s:param>
+		<s:param name="slottype" value="2"></s:param>BS BIO</s:a>
+	<s:a>
+		<s:param name="program" value="7"></s:param>
+		<s:param name="slottype" value="1"></s:param>BSSS</s:a>
 
 
 
@@ -52,7 +64,7 @@
 								value="duration" /></td>
 
 						<s:iterator value="sections">
-							<s:set var="hashkey" value="dayid + '-' + slotno + '-' + secid"></s:set>
+							<s:set var="hashkey" value="dayid + '-' + slottypeid + '-' + secid"></s:set>
 							<td class="slots " width="150">
 							<s:iterator value="scheduleMap.get(#hashkey)">
 								<s:if test="scheduleMap.get(#hashkey) != undefined">
@@ -65,6 +77,7 @@
 <%-- 									<td class="slots" width="130"><s:property value="#hashkey" /></td> --%>
 <%-- 								</s:if> --%>
 							</s:iterator>
+							<s:property value="slottypeid" />
 							</td>
 						</s:iterator>
 					</tr>

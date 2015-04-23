@@ -25,7 +25,8 @@ public class ScheduleAction {
 			this.scheduleMap = scheduleDAO.ListByProgram(getProgram());
 			this.sections = new SectionDAO().List(program);
 			return "programs";
-		} else {
+		}
+		else {
 			System.out.print("execute");
 			this.days = new DayDAO().List();
 			this.rooms = new RoomDAO().List(this.getCampus());

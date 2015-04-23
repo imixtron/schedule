@@ -85,8 +85,10 @@ public class ScheduleDAO {
 				schedule.setProgramid(rs.getInt("programid"));
 				schedule.setCampus(rs.getString("campus"));
 				schedule.setRoomno(rs.getString("roomno"));
+				schedule.setSslot(rs.getInt("subslotid"));
 				
-				key = schedule.getDayid()+ "-" +schedule.getSlotno()+ "-" +schedule.getSectionid();				
+				key = schedule.getDayid()+ "-" +schedule.getSslot()+ "-" +schedule.getSectionid();				
+				System.out.println(key);
 				if(key.equals(pkey)){
 					alSchedule.add(schedule);
 				}else{
@@ -96,7 +98,6 @@ public class ScheduleDAO {
 				
 				hSchedule.put(key, alSchedule);
 				pkey = key;
-//				System.out.println(key);
 
 			}
 		} catch (SQLException e) {

@@ -1,0 +1,6 @@
+
+
+SLOTTYPE = 1 : 3Hours Class
+SLOTTYPE = 2 : 1.5Hours Class
+
+we need to put a different check for 3 hours class that they should be printed like twice

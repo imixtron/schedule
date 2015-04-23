@@ -16,6 +16,7 @@ public class Schedule {
 	int sectionid;
 	String campus;
 	String roomno;
+	int sslot;
 	
 	
 	
@@ -108,6 +109,12 @@ public class Schedule {
 	}
 	public void setRoomno(String roomno) {
 		this.roomno = roomno;
+	}
+	public int getSslot() {
+		return sslot;
+	}
+	public void setSslot(int sslot) {
+		this.sslot = sslot;
 	}
 
 }
