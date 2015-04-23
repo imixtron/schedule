@@ -9,9 +9,15 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
+
+import org.apache.jasper.tagplugins.jstl.core.ForEach;
 
 import schedule.bean.OfferedCourses;
+import schedule.bean.Schedule;
 import schedule.data.Database;
 
 import com.google.gson.Gson;

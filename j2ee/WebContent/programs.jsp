@@ -19,55 +19,63 @@
 		<s:param name="campus" value="154"></s:param>154</s:a>
 	<br />
 	<s:a>
-		<s:param name="program" value="1"></s:param><s:param name="slottype" value="1"></s:param> BBBB</s:a>
+		<s:param name="program" value="1"></s:param>
+		<s:param name="slottype" value="1"></s:param> BBBB</s:a>
 	<s:a>
-		<s:param name="program" value="3"></s:param><s:param name="slottype" value="2"></s:param>BBBB</s:a>
-		<s:a><s:param name="program" value="2"></s:param><s:param name="slottype" value="1"></s:param>BBA</s:a>
-		
+		<s:param name="program" value="3"></s:param>
+		<s:param name="slottype" value="2"></s:param>BBBB</s:a>
+	<s:a>
+		<s:param name="program" value="2"></s:param>
+		<s:param name="slottype" value="1"></s:param>BBA</s:a>
 
 
-<table border="1" class="tbl" width="1800px"
-	style="position: absolute;">
-<tbody>
-	<tr class="rows" align="center">
-		<td class="days">Days</td>
-		<td class="days">Time slots</td>
-		<!-- BLANK -->
-		<s:iterator value="sections">
-		<td class="days" width="150"><s:property value="sectionname"/> </td>
-		</s:iterator>
-	</tr>
+
+	<table border="1" class="tbl" width="2800px"
+		style="position: absolute;">
+		<tbody>
+			<tr class="rows" align="center">
+				<td class="days">Days</td>
+				<td class="days">Time slots</td>
+				<!-- BLANK -->
+				<s:iterator value="sections">
+					<td class="days" width="150"><s:property value="sectionname" />
+					</td>
+				</s:iterator>
+			</tr>
 
 
-	<s:iterator value="days">
-		<s:iterator value="slots">
-		<tr class="rows" align="center">
-			<td class="days"><s:property value="dayname" /></td>
-					<td  class="slots ends header" width="100"><s:property value="duration"/></td>
+			<s:iterator value="days">
+				<s:iterator value="slots">
+					<tr class="rows" align="center">
+						<td class="days"><s:property value="dayname" /></td>
+						<td class="slots ends header" width="100"><s:property
+								value="duration" /></td>
 
 						<s:iterator value="sections">
-<!-- 							<td class="slots" width="130">tests12</td> -->
 							<s:set var="hashkey" value="dayid + '-' + slotno + '-' + secid"></s:set>
-								<s:iterator value="scheduleMap.get(#hashkey)">
+							<td class="slots " width="150">
+							<s:iterator value="scheduleMap.get(#hashkey)">
 								<s:if test="scheduleMap.get(#hashkey) != undefined">
-<%-- 									<td class="slots" width="130"><s:property value="#hashkey" /></td> --%>
-										<td class="slots ends" width="150"> <s:property value="title"/><br/>
-											<s:property value="teachername"/><br/>
-											Room <s:property value="roomno"/>
-										</td>
+										<s:property value="title" /><br /> 
+										<s:property value="teachername" /><br /> 
+ 										Room <s:property value="roomno" /><br/>
+ 										Campus <s:property value="campus"/>
 								</s:if>
-								<s:else>
-	
-							<td class="slots" width="130" >test</td>
-						</s:else>
-								</s:iterator>
+<%-- 								<s:if test="scheduleMap.get(#hashkey) == null"> --%>
+<%-- 									<td class="slots" width="130"><s:property value="#hashkey" /></td> --%>
+<%-- 								</s:if> --%>
+							</s:iterator>
+							</td>
 						</s:iterator>
 					</tr>
-		
-		</s:iterator>	
-		<tr><td colspan="14"><td></tr>
-	</s:iterator>
-			</tbody>
+
+				</s:iterator>
+				<tr>
+					<td colspan="14">
+					<td>
+				</tr>
+			</s:iterator>
+		</tbody>
 	</table>
 </body>
 </html>

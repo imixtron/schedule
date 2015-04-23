@@ -14,6 +14,8 @@ public class Schedule {
 	String duration;
 	int programid;
 	int sectionid;
+	String campus;
+	String roomno;
 	
 	
 	
@@ -94,6 +96,18 @@ public class Schedule {
 	}
 	public void setSectionid(int sectionid) {
 		this.sectionid = sectionid;
+	}
+	public String getCampus() {
+		return campus;
+	}
+	public void setCampus(String campus) {
+		this.campus = campus;
+	}
+	public String getRoomno() {
+		return roomno;
+	}
+	public void setRoomno(String roomno) {
+		this.roomno = roomno;
 	}
 
 }
