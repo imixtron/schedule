@@ -13,57 +13,12 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="E:/SZABIST/semister 6/AWT/Software/struts-2.3.1.1-all/lib/commons-fileupload-1.2.2.jar">
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Content">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="E:/SZABIST/semister 6/AWT/Software/struts-2.3.1.1-all/lib/commons-io-2.0.1.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="E:/SZABIST/semister 6/AWT/Software/struts-2.3.1.1-all/lib/commons-lang-2.5.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="E:/SZABIST/semister 6/AWT/Software/struts-2.3.1.1-all/lib/commons-logging-1.1.1.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="E:/SZABIST/semister 6/AWT/Software/struts-2.3.1.1-all/lib/commons-logging-api-1.1.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="E:/SZABIST/semister 6/AWT/Software/struts-2.3.1.1-all/lib/freemarker-2.3.18.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="E:/SZABIST/semister 6/AWT/Software/struts-2.3.1.1-all/lib/javassist-3.11.0.GA.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="E:/SZABIST/semister 6/AWT/Software/struts-2.3.1.1-all/lib/ognl-3.0.3.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="E:/SZABIST/semister 6/AWT/Software/struts-2.3.1.1-all/lib/struts2-core-2.3.1.1.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="E:/SZABIST/semister 6/AWT/Software/struts-2.3.1.1-all/lib/xwork-core-2.3.1.1.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Gson">
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/struts2">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>

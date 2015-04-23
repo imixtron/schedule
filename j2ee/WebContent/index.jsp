@@ -33,6 +33,14 @@ deleteEntry = function(tdOb){
 <s:a><s:param name="campus" value="90"></s:param>90</s:a>
 <s:a><s:param name="campus" value="100"></s:param>100</s:a>
 <s:a><s:param name="campus" value="154"></s:param>154</s:a>
+<br/>
+<s:a><s:param name="program" value="1"></s:param><s:param name="slottype" value="1"></s:param>BBBB</s:a>
+<s:a><s:param name="program" value="3"></s:param><s:param name="slottype" value="2"></s:param>BBBB</s:a>
+<s:a><s:param name="program" value="2"></s:param><s:param name="slottype" value="1"></s:param>BBA</s:a>
+
+
+
+
 
 <table border="1" class="tbl" width="1800px" style="position: absolute;">
 <tbody>
@@ -79,7 +87,7 @@ deleteEntry = function(tdOb){
 								<s:set  value="scheduleMap[#hashkey].size()" name="sizecheck"></s:set>
 								<s:if test ="#sizecheck == 1">
 										<s:iterator value="scheduleMap.get(#hashkey)">
-											<td class="slots" width="130" onclick="deleteEntry(this)"> <span><s:property value="schid"/></span> <s:property value="teachername"/> </td>
+											<td class="slots" width="130" onclick="deleteEntry(this)"> <span style="display:none" ><s:property value="schid"/></span> <s:property value="teachername"/> </td>
 											<td class="slots" width="130"><s:property value="title"/></td>
 											<td class="slots ends" width="130"> <s:property value="sectionname"/> (<s:property value="duration"/> )</td>
 										</s:iterator>
@@ -90,7 +98,7 @@ deleteEntry = function(tdOb){
 								    	<table width="100%" border="0">
 								    	<s:iterator value="scheduleMap.get(#hashkey)">
 												<tr height="20px">
-													<td align="center" style="border-bottom: 1px solid #3366FF" onclick="deleteEntry(this)"> <span><s:property value="schid"/></span> <s:property value="teachername"/></td>
+													<td align="center"  onclick="deleteEntry(this)"> <span style="display:none"><s:property value="schid"/></span> <s:property value="teachername"/></td>
 												</tr>
 											</s:iterator>
 										</table>
@@ -100,7 +108,7 @@ deleteEntry = function(tdOb){
 										<table width="100%" border="0">
 								    	<s:iterator value="scheduleMap.get(#hashkey)">
 												<tr height="20px">
-													<td align="center" style="border-bottom: 1px solid #d3d3d3" ><s:property value="title"/></td>
+													<td align="center"><s:property value="title"/></td>
 												</tr>
 											</s:iterator>
 										</table>
@@ -110,7 +118,7 @@ deleteEntry = function(tdOb){
 										<table width="100%" border="0">
 								    		<s:iterator value="scheduleMap.get(#hashkey)">
 												<tr height="20px">
-													<td align="center" style="border-bottom: 1px solid #3366FF"><s:property value="sectionname"/>  (<s:property value="duration"/>)</td>
+													<td align="center" ><s:property value="sectionname"/>  (<s:property value="duration"/>)</td>
 												</tr>
 											</s:iterator>
 										</table>
